@@ -13,8 +13,8 @@
 # Has Voted
 ```json
 {
- "user": userID,
- "hasvote": false/true
+ "user": "",
+ "hasvote": "false/true"
 }
 ```
 ```js
@@ -48,10 +48,19 @@ console.log("your voted")
 }
 ```
 ```js
-let a = await vc.hasvoted(botID, userID);
-if(!a) { 
-console.log("vote pls")
+let b = await vc.hasvoted(botID);
+if(b.error) {
+console.log(b.message)
 } else {
-console.log("your voted")
+console.log(`
+{
+ "tags": b.tags,
+ "coowners": b.coowners,
+ "votes": b.votes,
+ "botID": b.botID,
+ "ownerID": b.ownerID
+}
+`)
+...
 }
 ```
