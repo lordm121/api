@@ -58,8 +58,8 @@ console.log("Error: "+b.message)
 } else {
 console.log(`
 {
- "tags": ${b.tags},
- "coowners": ${b.coowners},
+ "tags": [${b.tags}],
+ "coowners": [${b.coowners}},
  "votes": ${b.votes},
  "botID": ${b.botID},
  "ownerID": ${b.ownerID}
