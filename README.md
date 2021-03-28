@@ -8,6 +8,7 @@
 - `npm i vcodes.js`
 
 ## Getting Started
+- `Base URL: https://vcodes.xyz/api/`
 - `const vc = require("vcodes.js")`
 
 # Has Voted
