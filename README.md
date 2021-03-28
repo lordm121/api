@@ -19,10 +19,14 @@
 ```
 ```js
 let a = await vc.hasvoted(botID, userID);
+if(a.error) {
+console.log("Error: "+a.message)
+} else {
 if(!a) { 
 console.log("vote pls")
 } else {
 console.log("your voted")
+}
 }
 ```
 
@@ -48,19 +52,48 @@ console.log("your voted")
 }
 ```
 ```js
-let b = await vc.hasvoted(botID);
+let b = await vc.info(botID);
 if(b.error) {
-console.log(b.message)
+console.log("Error: "+b.message)
 } else {
 console.log(`
 {
- "tags": b.tags,
- "coowners": b.coowners,
- "votes": b.votes,
- "botID": b.botID,
- "ownerID": b.ownerID
+ "tags": ${b.tags},
+ "coowners": ${b.coowners},
+ "votes": ${b.votes},
+ "botID": ${b.botID},
+ "ownerID": ${b.ownerID}
 }
 `)
-...
 }
+```
+
+# Bot Search
+```json
+{
+  "botID": "",
+  "votes": "",
+  "owner": "",
+  "ownerID": "",
+  "coowners": []
+}
+```
+```js
+let b = await vc.search(args[0]);
+ let result;
+  if(b.error) {
+  console.log(`
+  "error": true,
+  "message": "${b.message}",
+  "errorcode": ${b.errorcode}
+  `)  
+  } else {
+  console.log(`
+  "botID": "${b.botID}",
+  "votes": "${b.votes}",
+  "owner": "${b.owner}",
+  "ownerID": "${b.ownerID}",
+  "coowners": ["${b.coowners}"]
+  `)
+  }
 ```
