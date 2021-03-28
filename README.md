@@ -19,7 +19,7 @@
 }
 ```
 ```js
-let a = await vc.hasvoted(botID, userID);
+let a = await vc.hasVoted(botID, userID);
 if(a.error) {
 console.log("Error: "+a.message)
 } else {
