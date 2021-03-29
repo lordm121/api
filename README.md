@@ -60,7 +60,7 @@ console.log("Error: "+b.message)
 console.log(`
 {
  "tags": [${b.tags}],
- "coowners": [${b.coowners}},
+ "coowners": [${b.coowners}],
  "votes": ${b.votes},
  "botID": ${b.botID},
  "ownerID": ${b.ownerID}
@@ -80,7 +80,7 @@ console.log(`
 }
 ```
 ```js
-let b = await vc.search(args[0]);
+let b = await vc.search(value);
  let result;
   if(b.error) {
   console.log(`
@@ -94,7 +94,7 @@ let b = await vc.search(args[0]);
   "votes": "${b.votes}",
   "owner": "${b.owner}",
   "ownerID": "${b.ownerID}",
-  "coowners": ["${b.coowners}"]
+  "coowners": [${b.coowners}]
   `)
   }
 ```
