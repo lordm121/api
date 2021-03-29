@@ -81,7 +81,6 @@ console.log(`
 ```
 ```js
 let b = await vc.search(value);
- let result;
   if(b.error) {
   console.log(`
   "error": true,
