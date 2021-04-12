@@ -3,6 +3,10 @@
 **Support:** [https://vcodes.xyz/dc](https://vcodes.xyz/dc) <br>
 **NPM:** [npmjs.com/package/vcodes.js](https://www.npmjs.com/package/void.nsfw)<br>
 
+# Announcemenets / Duyurular
+🇹🇷 - Sadece bizim bot list altyapımızda çalışabilir.<br>
+🇺🇸 - It can only work in our bot list infrastructure.
+
 ## Installation
 *If you have trouble with the installation, please feel free to visit our [discord](https://vcodes.xyz/dc) address.*
 - `npm i vcodes.js`
