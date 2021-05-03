@@ -1,18 +1,34 @@
-const axios = require('axios')
+const fetch = require("node-fetch");
+module.exports = class VOID {
+  constructor(token, client) {
+    this['token'] = token;
+    this['client'] = client;
+    return this;
+  }
 
-
-class API {
-    static async hasVoted(bot, id) {
-    const hasvotes = await axios.get(`https://vcodes.xyz/api/${bot}/voted/${id}`).then(a => a.data.hasvote)
-    return await hasvotes
-    }
-    static async info(bot) {
-    const infos = await axios.get(`https://vcodes.xyz/api/${bot}`).then(a => a.data)
-    return await infos
-    }
-    static async search(value) {
-    const results = await axios.get(`https://vcodes.xyz/api/search/${value}`).then(a => a.data)
-    return await results
-    }
+  serverCount(message) {
+  fetch(`https://vcodes.xyz/api/bots/stats`, {
+        method: 'POST',
+        headers: { 
+          'serverCount': this.client.guilds.cache.size,
+          'Content-Type': 'application/json', 
+          'Authorization': this.token
+        },
+    })
+    .then(console.log(message || "Server count posted."));
+  }
+  
+  async search(id) {
+  return await fetch(`https://vcodes.xyz/api/bots/${id}`, {
+        method: 'GET'
+    })
+    .then(res => res.json()).then(json => json);
+  }
+  
+  async hasVoted(id) {
+  return await fetch(`https://vcodes.xyz/api/bots/check/${id}`, {method: 'GET',headers: { 
+    'Content-Type': 'application/json', 'Authorization': this.token
+  }
+  }).then(res => res.json()).then(async json => json.voted);
+  }
 }
-module.exports = API
