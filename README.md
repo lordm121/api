@@ -8,7 +8,7 @@
 - `npm i vcodes.js`
 
 ```js
-const vCodes = require("./vcodes.js");
+const vCodes = require("vcodes.js");
 const dbl = new vCodes("TOKEN-HERE", client);
 
 client.on("ready", async () => {
