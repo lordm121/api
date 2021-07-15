@@ -1,7 +1,7 @@
 # kurd.js
 <a href="https:///dc" target="_blank"><img src="https://img.devsforum.net/tr/img/h1Z2X3.png" alt="Join our discord" width="256"></a><br>
-**Support:** [https://vcodes.xyz/dc](https:///dc) <br>
-**NPM:** [npmjs.com/package/vcodes.js](https://www.npmjs.com/package/kurd.js)<br>
+**Support:** [](https:///dc) <br>
+**NPM:** [](https://www.npmjs.com/package/kurd.js)<br>
 
 ## Installation
 *If you have trouble with the installation, please feel free to visit our [discord](https://vcodes.xyz/dc) address.*
